@@ -1,0 +1,124 @@
+.accordion-demo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.accordion-demo h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.accordion-demo .description {
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.demo-section {
+  margin-bottom: 50px;
+}
+
+.demo-section h2 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.demo-section > p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Accordion Styles */
+.accordion {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+  background: #e9ecef;
+}
+
+.accordion-item.expanded .accordion-header {
+  background: #e9ecef;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  color: #666;
+}
+
+.accordion-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-panel.expanded {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-panel-content {
+  padding: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Custom styling for nested content */
+.accordion-panel-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.accordion-panel-content li {
+  margin: 5px 0;
+}
+
+.accordion-panel-content code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* Animation enhancement */
+.accordion-item {
+  transition: box-shadow 0.2s;
+}
+
+.accordion-item.expanded {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
