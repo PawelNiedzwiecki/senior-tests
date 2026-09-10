@@ -2,7 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@impl/*": ["./solutions/*"]
+      "@impl/*": ["./solutions/*"],
+      "@algo/*": ["./algo/solutions/*"]
     }
   }
 }

@@ -4,13 +4,16 @@ Two things live in this repository:
 
 | | |
 | --- | --- |
-| **[`prep/`](./prep/README.md)** | **DeepL senior frontend TypeScript interview prep** — 24 test-driven drills, 4 timed mock interviews, and 5 cheat sheets, laid out as a six-day sprint. Start at [`prep/README.md`](./prep/README.md). |
+| **[`prep/algo/`](./prep/algo/README.md)** | **Live Coding 1 — Fundamentals & Problem Solving.** Algorithms and data structures for the HackerRank round: 12 pattern modules (36 problems), a no-framework test harness, complexity reference, playbook and 3 timed mocks. |
+| **[`prep/`](./prep/README.md)** | **Frontend TypeScript round** (likely Live Coding 2): 24 test-driven drills on the type system, React hooks, DOM and a11y, plus 4 mocks and 5 cheat sheets. |
 | `src/` | The original React exercise app (below), unchanged. |
 
 ```bash
 npm install
-npm run drills:watch      # the interview drills
-npm run dev               # the React exercise app
+npm run drills:watch                # all drills, re-running on save
+npm run drills -- 01-hash-maps      # one module
+npm run drills:solutions            # the same tests against the solutions
+npm run dev                         # the React exercise app
 ```
 
 ---
