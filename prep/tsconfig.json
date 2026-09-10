@@ -22,7 +22,8 @@
     "baseUrl": ".",
     "paths": {
       "@impl/*": ["./drills/*"],
-      "@algo/*": ["./algo/drills/*"]
+      "@algo/*": ["./algo/drills/*"],
+      "@patterns/*": ["./patterns/drills/*"]
     }
   },
   "include": ["."]

@@ -15,6 +15,7 @@ export default defineConfig({
     alias: {
       '@impl': path.resolve(import.meta.dirname, 'prep', target),
       '@algo': path.resolve(import.meta.dirname, 'prep/algo', target),
+      '@patterns': path.resolve(import.meta.dirname, 'prep/patterns', target),
     },
   },
   test: {

@@ -3,7 +3,8 @@
   "compilerOptions": {
     "paths": {
       "@impl/*": ["./solutions/*"],
-      "@algo/*": ["./algo/solutions/*"]
+      "@algo/*": ["./algo/solutions/*"],
+      "@patterns/*": ["./patterns/solutions/*"]
     }
   }
 }
