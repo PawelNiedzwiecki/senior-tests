@@ -1,3 +1,20 @@
+# Senior Frontend Practice
+
+Two things live in this repository:
+
+| | |
+| --- | --- |
+| **[`prep/`](./prep/README.md)** | **DeepL senior frontend TypeScript interview prep** — 24 test-driven drills, 4 timed mock interviews, and 5 cheat sheets, laid out as a six-day sprint. Start at [`prep/README.md`](./prep/README.md). |
+| `src/` | The original React exercise app (below), unchanged. |
+
+```bash
+npm install
+npm run drills:watch      # the interview drills
+npm run dev               # the React exercise app
+```
+
+---
+
 # React Senior Exercises
 
 A collection of hands-on React exercises designed to test and improve your React skills for senior-level positions.
