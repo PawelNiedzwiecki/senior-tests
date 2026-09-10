@@ -21,7 +21,8 @@
 
     "baseUrl": ".",
     "paths": {
-      "@impl/*": ["./drills/*"]
+      "@impl/*": ["./drills/*"],
+      "@algo/*": ["./algo/drills/*"]
     }
   },
   "include": ["."]

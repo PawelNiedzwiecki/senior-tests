@@ -1,4 +1,20 @@
-# DeepL Senior Frontend — TypeScript Interview Prep
+# DeepL interview prep — two tracks
+
+> ## ⚠️ Which track do you need?
+>
+> | If the round is… | Go to |
+> | --- | --- |
+> | **Live Coding 1 — Fundamentals & Problem Solving** (HackerRank, algorithms, complexity) | **[`algo/`](./algo/README.md)** ← start here |
+> | A frontend TypeScript round (types, React, DOM, a11y) — likely **Live Coding 2** | this folder, below |
+>
+> These are different interviews and the preparation barely overlaps. The
+> algorithms round tests abstract problem solving in a browser IDE with no test
+> framework; this folder tests applied frontend TypeScript in your own editor.
+> Opening the wrong one wastes a day you may not have.
+
+---
+
+# Frontend TypeScript track
 
 A six-day sprint for a **live coding interview in your own IDE**, with one
 interviewer checking TypeScript depth.
@@ -35,6 +51,7 @@ use it to confirm a test is passable when you are convinced it is not.
 
 ```
 prep/
+├── algo/           ← THE ALGORITHMS ROUND (HackerRank). Separate track, own README.
 ├── drills/         ← you work here. Every file has a spec, hints and a time box
 ├── solutions/      ← reference implementations + the explanations that score points
 ├── cheatsheets/    ← read these on the train, not at the keyboard
