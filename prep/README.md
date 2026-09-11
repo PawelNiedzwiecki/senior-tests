@@ -5,6 +5,7 @@
 > | If the round is… | Go to |
 > | --- | --- |
 > | **Live Coding 1 — Fundamentals & Problem Solving** (HackerRank, algorithms, complexity) | **[`algo/`](./algo/README.md)** ← start here |
+> | …and you want to learn to *recognise* which pattern a problem wants | **[`patterns/`](./patterns/README.md)** |
 > | A frontend TypeScript round (types, React, DOM, a11y) — likely **Live Coding 2** | this folder, below |
 >
 > These are different interviews and the preparation barely overlaps. The
@@ -52,6 +53,7 @@ use it to confirm a test is passable when you are convinced it is not.
 ```
 prep/
 ├── algo/           ← THE ALGORITHMS ROUND (HackerRank). Separate track, own README.
+├── patterns/       ← Pattern catalogue + recognition quiz. Read alongside algo/.
 ├── drills/         ← you work here. Every file has a spec, hints and a time box
 ├── solutions/      ← reference implementations + the explanations that score points
 ├── cheatsheets/    ← read these on the train, not at the keyboard
