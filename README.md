@@ -6,6 +6,7 @@ Two things live in this repository:
 | --- | --- |
 | **[`prep/algo/`](./prep/algo/README.md)** | **Live Coding 1 — Fundamentals & Problem Solving.** Algorithms and data structures for the HackerRank round: 12 pattern modules (36 problems), a no-framework test harness, complexity reference, playbook and 3 timed mocks. |
 | **[`prep/patterns/`](./prep/patterns/README.md)** | **Pattern recognition.** A catalogue of the 22 recurring interview patterns with the tells that identify each, a 60-problem "name the pattern" quiz with answer key, and runnable drills for the 8 patterns `algo/` doesn't cover. |
+| **[`prep/leetcode/`](./prep/leetcode/README.md)** | **Pattern practice.** Two LeetCode problems for each of the 22 patterns (44 in total). Every module explains the pattern first — tell, template, cost — then the two problems, each with its own explanation and hints. |
 | **[`prep/`](./prep/README.md)** | **Frontend TypeScript round** (likely Live Coding 2): 24 test-driven drills on the type system, React hooks, DOM and a11y, plus 4 mocks and 5 cheat sheets. |
 | `src/` | The original React exercise app (below), unchanged. |
 
@@ -13,6 +14,7 @@ Two things live in this repository:
 npm install
 npm run drills:watch                # all drills, re-running on save
 npm run drills -- 01-hash-maps      # one module
+npm run drills -- leetcode          # the 44-problem pattern set
 npm run drills:solutions            # the same tests against the solutions
 npm run dev                         # the React exercise app
 ```

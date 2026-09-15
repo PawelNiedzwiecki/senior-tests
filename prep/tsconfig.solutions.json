@@ -4,7 +4,8 @@
     "paths": {
       "@impl/*": ["./solutions/*"],
       "@algo/*": ["./algo/solutions/*"],
-      "@patterns/*": ["./patterns/solutions/*"]
+      "@patterns/*": ["./patterns/solutions/*"],
+      "@leetcode/*": ["./leetcode/solutions/*"]
     }
   }
 }
