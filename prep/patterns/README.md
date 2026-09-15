@@ -8,13 +8,14 @@ recurring shapes. The hard part is not implementing a sliding window — it is
 
 ---
 
-## The three files that matter
+## The files that matter
 
 | | |
 | --- | --- |
 | **[`CATALOGUE.md`](./CATALOGUE.md)** | All 22 patterns. For each: the words that give it away, the structural condition that makes it valid, the code template, the cost, and the variations interviewers escalate to. Starts with a **30-second triage table** — read the problem, read down the table, first match wins. |
 | **[`recognition/quiz.md`](./recognition/quiz.md)** | 60 problem statements. Name the pattern, do not solve. Answer key explains the tell *and* the wrong guess. This is the drill that actually builds the skill. |
 | **[`drills/`](./drills/)** | Runnable practice for the 8 patterns `prep/algo/` does not cover. Stubs fail until you implement them. |
+| **[`../leetcode/`](../leetcode/README.md)** | Two problems for **every** one of the 22 patterns, 44 in total, each module explaining the pattern before the problems. Where to go once the quiz stops being hard. |
 
 ---
 
@@ -91,6 +92,10 @@ Tiered by how often they actually appear.
 **Bold** entries are the drills in this folder — the patterns `prep/algo/` does
 not already cover.
 
+Every one of the 22 also has two dedicated problems in
+[`prep/leetcode/`](../leetcode/README.md), with the pattern explained before
+them.
+
 ---
 
 ## Running the drills
@@ -151,6 +156,7 @@ behind the six trickiest patterns, and interviewers listen for exactly this.
 | Folder | Purpose |
 | --- | --- |
 | **`prep/patterns/`** | *This folder.* Which pattern is this? Recognition first. |
+| [`prep/leetcode/`](../leetcode/README.md) | Two problems per pattern, pattern explained first. Practice once you can name them. |
 | [`prep/algo/`](../algo/README.md) | The Live Coding 1 kit: 12 modules, the HackerRank harness, complexity reference, playbook, timed mocks. |
 | [`prep/`](../README.md) | The frontend TypeScript round (likely Live Coding 2). |
 

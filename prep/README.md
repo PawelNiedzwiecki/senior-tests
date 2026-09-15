@@ -6,6 +6,8 @@
 > | --- | --- |
 > | **Live Coding 1 — Fundamentals & Problem Solving** (HackerRank, algorithms, complexity) | **[`algo/`](./algo/README.md)** ← start here |
 > | …and you want to learn to *recognise* which pattern a problem wants | **[`patterns/`](./patterns/README.md)** |
+> | …and you want two problems per pattern to practise on | **[`leetcode/`](./leetcode/README.md)** |
+> | …and you have **one day** for all 22 patterns | **[`ONE-DAY.md`](./ONE-DAY.md)** |
 > | A frontend TypeScript round (types, React, DOM, a11y) — likely **Live Coding 2** | this folder, below |
 >
 > These are different interviews and the preparation barely overlaps. The
