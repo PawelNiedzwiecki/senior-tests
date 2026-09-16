@@ -133,6 +133,7 @@ Five habits that are worth more than any single problem here:
 | Folder | Purpose |
 | --- | --- |
 | **`prep/leetcode/`** | *This folder.* Two problems per pattern, with the pattern explained first. Practice. |
+| [`prep/tier-1/`](../tier-1/README.md) | The seven Tier 1 patterns with five exams each (35 problems), hints included — depth where this folder gives breadth. |
 | [`prep/patterns/`](../patterns/README.md) | Recognition: the 22-pattern catalogue and a 60-problem "name the pattern" quiz. Read the catalogue, take the quiz, then come here. |
 | [`prep/algo/`](../algo/README.md) | The Live Coding 1 kit: 12 modules, the HackerRank harness, complexity reference, playbook, timed mocks. |
 | [`prep/`](../README.md) | The frontend TypeScript round. |

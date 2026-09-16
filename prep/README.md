@@ -6,6 +6,7 @@
 > | --- | --- |
 > | **Live Coding 1 — Fundamentals & Problem Solving** (HackerRank, algorithms, complexity) | **[`algo/`](./algo/README.md)** ← start here |
 > | …and you want to learn to *recognise* which pattern a problem wants | **[`patterns/`](./patterns/README.md)** |
+> | …and you want **depth on the seven patterns most likely to be asked** | **[`tier-1/`](./tier-1/README.md)** |
 > | …and you want two problems per pattern to practise on | **[`leetcode/`](./leetcode/README.md)** |
 > | …and you have **one day** for all 22 patterns | **[`ONE-DAY.md`](./ONE-DAY.md)** |
 > | A frontend TypeScript round (types, React, DOM, a11y) — likely **Live Coding 2** | this folder, below |
@@ -55,6 +56,7 @@ use it to confirm a test is passable when you are convinced it is not.
 ```
 prep/
 ├── algo/           ← THE ALGORITHMS ROUND (HackerRank). Separate track, own README.
+├── tier-1/         ← The 7 highest-frequency patterns, 5 exams each, hints included.
 ├── patterns/       ← Pattern catalogue + recognition quiz. Read alongside algo/.
 ├── drills/         ← you work here. Every file has a spec, hints and a time box
 ├── solutions/      ← reference implementations + the explanations that score points

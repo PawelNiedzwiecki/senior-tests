@@ -157,6 +157,7 @@ behind the six trickiest patterns, and interviewers listen for exactly this.
 | --- | --- |
 | **`prep/patterns/`** | *This folder.* Which pattern is this? Recognition first. |
 | [`prep/leetcode/`](../leetcode/README.md) | Two problems per pattern, pattern explained first. Practice once you can name them. |
+| [`prep/tier-1/`](../tier-1/README.md) | The seven Tier 1 patterns only, five exams each with hints. Depth on what is most likely to be asked. |
 | [`prep/algo/`](../algo/README.md) | The Live Coding 1 kit: 12 modules, the HackerRank harness, complexity reference, playbook, timed mocks. |
 | [`prep/`](../README.md) | The frontend TypeScript round (likely Live Coding 2). |
 
