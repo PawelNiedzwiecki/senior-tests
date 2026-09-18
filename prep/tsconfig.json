@@ -24,7 +24,8 @@
       "@impl/*": ["./drills/*"],
       "@algo/*": ["./algo/drills/*"],
       "@patterns/*": ["./patterns/drills/*"],
-      "@leetcode/*": ["./leetcode/drills/*"]
+      "@leetcode/*": ["./leetcode/drills/*"],
+      "@tier1/*": ["./tier-1/exams/*"]
     }
   },
   "include": ["."]

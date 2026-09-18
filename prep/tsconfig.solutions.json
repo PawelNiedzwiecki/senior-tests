@@ -5,7 +5,8 @@
       "@impl/*": ["./solutions/*"],
       "@algo/*": ["./algo/solutions/*"],
       "@patterns/*": ["./patterns/solutions/*"],
-      "@leetcode/*": ["./leetcode/solutions/*"]
+      "@leetcode/*": ["./leetcode/solutions/*"],
+      "@tier1/*": ["./tier-1/solutions/*"]
     }
   }
 }
