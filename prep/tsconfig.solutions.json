@@ -2,7 +2,6 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@impl/*": ["./solutions/*"],
       "@algo/*": ["./algo/solutions/*"],
       "@patterns/*": ["./patterns/solutions/*"],
       "@leetcode/*": ["./leetcode/solutions/*"],

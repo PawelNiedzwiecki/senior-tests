@@ -39,8 +39,28 @@
  * HINT: do NOT build a cleaned copy first — that is O(n) space and the
  *       interviewer will ask you to remove it. Skip non-alphanumerics as you go.
  */
-export function isPalindrome(_s: string): boolean {
-  throw new Error('Not implemented');
+export function isPalindrome(s: string): boolean {
+	const isAlphaNum = (c: string) => /[a-z0-9]/i.test(c);
+	let left = 0,
+		right = s.length - 1;
+
+	while (left < right) {
+		if (!isAlphaNum(s.charAt(left))) {
+			left++;
+			continue;
+		}
+		if (!isAlphaNum(s.charAt(right))) {
+			right--;
+			continue;
+		}
+		if (s.charAt(left).toLowerCase() !== s.charAt(right).toLowerCase()) {
+			return false;
+		}
+		left++;
+		right--;
+	}
+
+	return true;
 }
 
 /**
@@ -55,8 +75,25 @@ export function isPalindrome(_s: string): boolean {
  *       Sum too big → move `right` left. Be ready to justify why that never
  *       skips the answer.
  */
-export function twoSumSorted(_nums: number[], _target: number): [number, number] | null {
-  throw new Error('Not implemented');
+export function twoSumSorted(
+	nums: number[],
+	target: number,
+): [number, number] | null {
+	let left = 0;
+	let right = nums.length - 1;
+
+	while (left < right) {
+		const sum = nums[left]! + nums[right]!;
+		if (sum === target) {
+			return [left, right];
+		} else if (sum < target) {
+			left++;
+		} else {
+			right--;
+		}
+	}
+
+	return null;
 }
 
 /**
@@ -75,7 +112,7 @@ export function twoSumSorted(_nums: number[], _target: number): [number, number]
  *       ↑ That sentence is the answer to "why is this correct?". Rehearse it.
  */
 export function maxArea(_heights: number[]): number {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }
 
 /**
@@ -89,6 +126,15 @@ export function maxArea(_heights: number[]): number {
  * HINT: a `write` pointer trailing a `read` pointer. This "compaction" shape
  *       also solves remove-duplicates and remove-element — learn it once.
  */
-export function moveZeroes(_nums: number[]): number[] {
-  throw new Error('Not implemented');
+export function moveZeroes(nums: number[]): number[] {
+	let write = 0;
+
+	for (let read = 0; read < nums.length; read++) {
+		if (nums[read] !== 0) {
+			[nums[write], nums[read]] = [nums[read]!, nums[write]!];
+			write++;
+		}
+	}
+
+	return nums;
 }

@@ -56,8 +56,11 @@
  *       gives objects with a `.segment` property. Map, reverse, join.
  * SAY: name all three levels and explain which you chose. That IS the answer.
  */
-export function reverseString(_s: string): string {
-  throw new Error('Not implemented');
+export function reverseString(s: string): string {
+	return [...new Intl.Segmenter("en", { granularity: "grapheme" }).segment(s)]
+		.reverse()
+		.map((item) => item.segment)
+		.join("");
 }
 
 /**
@@ -78,8 +81,11 @@ export function reverseString(_s: string): string {
  *       A comparator returning `b[1] - a[1] || a[0].localeCompare(b[0])` does
  *       both, and relies on `sort` being stable-safe — but explicit is better.
  */
-export function wordFrequencies(_text: string, _limit: number): Array<[string, number]> {
-  throw new Error('Not implemented');
+export function wordFrequencies(
+	_text: string,
+	_limit: number,
+): Array<[string, number]> {
+	throw new Error("Not implemented");
 }
 
 /**
@@ -97,5 +103,5 @@ export function wordFrequencies(_text: string, _limit: number): Array<[string, n
  *       early bound to mention.
  */
 export function longestCommonPrefix(_words: string[]): string {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }

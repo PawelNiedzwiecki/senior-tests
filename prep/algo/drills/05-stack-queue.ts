@@ -43,8 +43,31 @@
  *       Two failure modes to handle explicitly: a closer with an EMPTY stack,
  *       and a NON-EMPTY stack at the end.
  */
-export function isValidParentheses(_s: string): boolean {
-  throw new Error('Not implemented');
+export function isValidParentheses(s: string): boolean {
+	const closerToOpener: Record<string, string> = {
+		")": "(",
+		"]": "[",
+		"}": "{",
+	};
+	const stack: string[] = [];
+
+	for (const char of s) {
+		if (char in closerToOpener) {
+			if (stack[stack.length - 1] === closerToOpener[char]) {
+				stack.pop();
+			} else {
+				return false;
+			}
+		} else {
+			stack.push(char);
+		}
+	}
+
+	if (stack.length === 0) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /**
@@ -67,25 +90,25 @@ export function isValidParentheses(_s: string): boolean {
  *       expect `undefined`.
  */
 export class MinStack {
-  push(_value: number): void {
-    throw new Error('Not implemented');
-  }
+	push(_value: number): void {
+		throw new Error("Not implemented");
+	}
 
-  pop(): number | undefined {
-    throw new Error('Not implemented');
-  }
+	pop(): number | undefined {
+		throw new Error("Not implemented");
+	}
 
-  top(): number | undefined {
-    throw new Error('Not implemented');
-  }
+	top(): number | undefined {
+		throw new Error("Not implemented");
+	}
 
-  getMin(): number | undefined {
-    throw new Error('Not implemented');
-  }
+	getMin(): number | undefined {
+		throw new Error("Not implemented");
+	}
 
-  get size(): number {
-    throw new Error('Not implemented');
-  }
+	get size(): number {
+		throw new Error("Not implemented");
+	}
 }
 
 /**
@@ -105,5 +128,5 @@ export class MinStack {
  *       Say this; it is the whole point of the problem.
  */
 export function dailyTemperatures(_temperatures: number[]): number[] {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }

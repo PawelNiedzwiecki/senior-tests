@@ -38,11 +38,11 @@ export default defineConfig([
     },
   },
   {
-    // Drill STUBS only. These are deliberately incomplete: unimplemented
+    // Exam STUBS only. These are deliberately incomplete: unimplemented
     // generators throw instead of yielding, placeholder types ignore their type
     // parameters, and `{}` stands in for "you work this out". Solutions and
     // tests keep the full rule set.
-    files: ['prep/drills/**/*.{ts,tsx}'],
+    files: ['prep/*/drills/**/*.{ts,tsx}', 'prep/tier-1/exams/**/*.{ts,tsx}'],
     rules: {
       'require-yield': 'off',
       '@typescript-eslint/no-unused-vars': 'off',

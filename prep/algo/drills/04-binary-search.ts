@@ -48,8 +48,25 @@
  * TARGET: O(log n) time, O(1) space.
  * Write it iteratively. Recursion here costs O(log n) stack for no benefit.
  */
-export function binarySearch(_nums: number[], _target: number): number {
-  throw new Error('Not implemented');
+export function binarySearch(nums: number[], target: number): number {
+	if (!nums.length) return -1;
+
+	let low = 0;
+	let high = nums.length - 1;
+
+	while (low <= high) {
+		const mid = Math.floor((low + high) / 2);
+
+		if (nums[mid] === target) {
+			return mid;
+		} else if (nums[mid]! < target) {
+			low = mid + 1;
+		} else {
+			high = mid - 1;
+		}
+	}
+
+	return -1;
 }
 
 /**
@@ -66,8 +83,47 @@ export function binarySearch(_nums: number[], _target: number): number {
  * HINT: two separate searches. For the FIRST occurrence, on a match record it
  *       and keep searching LEFT. For the LAST, keep searching RIGHT.
  */
-export function searchRange(_nums: number[], _target: number): [number, number] {
-  throw new Error('Not implemented');
+export function searchRange(nums: number[], target: number): [number, number] {
+	function leftSearch() {
+		let low = 0;
+		let high = nums.length - 1;
+		let result = -1;
+		while (low <= high) {
+			const mid = Math.floor((low + high) / 2);
+			if (nums[mid] === target) {
+				result = mid;
+				high = mid - 1;
+			} else if (nums[mid]! < target) {
+				low = mid + 1;
+			} else {
+				high = mid - 1;
+			}
+		}
+		return result;
+	}
+
+	function rightSearch() {
+		let low = 0;
+		let high = nums.length - 1;
+		let result = -1;
+		while (low <= high) {
+			const mid = Math.floor((low + high) / 2);
+			if (nums[mid] === target) {
+				result = mid;
+				low = mid + 1;
+			} else if (nums[mid]! < target) {
+				low = mid + 1;
+			} else {
+				high = mid - 1;
+			}
+		}
+		return result;
+	}
+
+	const left = leftSearch();
+	const right = rightSearch();
+
+	return [left, right];
 }
 
 /**
@@ -77,6 +133,7 @@ export function searchRange(_nums: number[], _target: number): [number, number] 
  *   searchRotated([4, 5, 6, 7, 0, 1, 2], 0) → 4
  *   searchRotated([4, 5, 6, 7, 0, 1, 2], 3) → -1
  *   searchRotated([1], 1)                   → 0
+ *  [5,6,7,1,2,3,4], target 4
  *
  * TARGET: O(log n) time.
  * HINT: at any mid, at least one half is properly sorted — compare
@@ -84,8 +141,33 @@ export function searchRange(_nums: number[], _target: number): [number, number] 
  *       that sorted half's range, search it; otherwise search the other half.
  *       Use <= on that comparison, or a two-element range misbehaves.
  */
-export function searchRotated(_nums: number[], _target: number): number {
-  throw new Error('Not implemented');
+
+export function searchRotated(nums: number[], target: number): number {
+	let low = 0; //
+	let high = nums.length - 1; // 7
+
+	while (low <= high) {
+		const mid = Math.floor((low + high) / 2); // 3
+
+		if (nums[mid] === target) {
+			return mid;
+		} else if (nums[low]! <= nums[mid]!) {
+			// 7 <= 0
+			if (nums[low]! <= target && target < nums[mid]!) {
+				high = mid - 1;
+			} else {
+				low = mid + 1;
+			}
+		} else {
+			if (nums[mid]! <= target && target <= nums[high]!) {
+				low = mid + 1;
+			} else {
+				high = mid - 1;
+			}
+		}
+	}
+
+	return -1;
 }
 
 /**
@@ -109,5 +191,5 @@ export function searchRotated(_nums: number[], _target: number): number {
  *       property is that the predicate is monotonic in k."
  */
 export function minEatingSpeed(_piles: number[], _h: number): number {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }

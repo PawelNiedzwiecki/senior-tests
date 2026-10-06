@@ -2,18 +2,17 @@ import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
-// Every drill test imports its subject from `@impl/...`.
-// By default that resolves to your work-in-progress files in `prep/drills`.
-// Run with SOLUTIONS=1 to point the exact same tests at `prep/solutions`
-// (useful to confirm a test is passable, or to diff your approach).
-const target = process.env.SOLUTIONS === '1' ? 'solutions' : 'drills';
-const useSolutions = target === 'solutions';
+// Every drill/exam test imports its subject from `@algo/...`, `@patterns/...`,
+// etc. By default those resolve to your work-in-progress files.
+// Run with SOLUTIONS=1 to point the exact same tests at the `solutions`
+// folders (useful to confirm a test is passable, or to diff your approach).
+const useSolutions = process.env.SOLUTIONS === '1';
+const target = useSolutions ? 'solutions' : 'drills';
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@impl': path.resolve(import.meta.dirname, 'prep', target),
       '@algo': path.resolve(import.meta.dirname, 'prep/algo', target),
       '@patterns': path.resolve(import.meta.dirname, 'prep/patterns', target),
       '@leetcode': path.resolve(import.meta.dirname, 'prep/leetcode', target),
@@ -22,8 +21,7 @@ export default defineConfig({
   },
   test: {
     root: path.resolve(import.meta.dirname, 'prep'),
-    environment: 'jsdom',
-    setupFiles: [path.resolve(import.meta.dirname, 'prep/support/setup.ts')],
+    environment: 'node',
     include: ['**/*.test.ts', '**/*.test.tsx'],
     typecheck: {
       enabled: true,

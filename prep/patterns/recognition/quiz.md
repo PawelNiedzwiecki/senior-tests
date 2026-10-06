@@ -13,76 +13,76 @@ The answer key is at the bottom, after a long gap. Do not scroll into it.
 
 ## Round 1 — the tells are on the surface (20)
 
-1. A sorted array of integers. Find two numbers that add up to a target.
-2. Find the length of the longest substring with no repeating characters.
-3. An array holds n integers, each between 1 and n, with one missing. Find it.
-4. Merge all overlapping intervals in a list.
-5. Return the index of a target in a sorted array. Must be O(log n).
-6. Count how many times each word appears in a document.
-7. Return the k most frequent elements in an array.
-8. Determine whether a singly linked list contains a cycle.
-9. A grid of land and water cells. How many islands are there?
-10. Given course prerequisites, determine whether all courses can be completed.
-11. Generate every subset of a set of distinct integers.
-12. Fewest coins needed to make a given amount, with unlimited coins of each value.
-13. Return the sum of elements between indices i and j. You will be asked ~10,000 times on the same array.
-14. For each day's temperature, how many days until a warmer one?
-15. Every number in an array appears twice except one. Find it, using O(1) space.
-16. Implement autocomplete over a fixed dictionary of words.
-17. Reverse a singly linked list in place.
-18. Rotate an n×n matrix 90° clockwise, in place.
-19. Given meeting time intervals, how many rooms are needed at the busiest moment?
-20. Two user accounts are the same person if they share any email. How many distinct people?
+1. A sorted array of integers. Find two numbers that add up to a target. → **Two pointers** *("Sorted" + "find a pair" → converging pointers.)*
+2. Find the length of the longest substring with no repeating characters. → **Sliding window** *("Longest" + "substring" = contiguous + extremum.)*
+3. An array holds n integers, each between 1 and n, with one missing. Find it. → **Cyclic sort** *("n integers, each between 1 and n" → values are indices.)*
+4. Merge all overlapping intervals in a list. → **Sort by start + greedy** *("Merge overlapping intervals" is the canonical statement.)*
+5. Return the index of a target in a sorted array. Must be O(log n). → **Binary search** *("Sorted" + explicit O(log n).)*
+6. Count how many times each word appears in a document. → **Hash map** *(Pure frequency counting.)*
+7. Return the k most frequent elements in an array. → **Heap / bucket sort** *("k most frequent" elements.)*
+8. Determine whether a singly linked list contains a cycle. → **Fast & slow pointers** *("Linked list" + "cycle" → Floyd's.)*
+9. A grid of land and water cells. How many islands are there? → **DFS/BFS flood fill** *(Connected components on an implicit grid graph.)*
+10. Given course prerequisites, determine whether all courses can be completed. → **Topological sort** *("Prerequisites" + "can all be completed" = acyclic check.)*
+11. Generate every subset of a set of distinct integers. → **Backtracking** *("Every subset" → enumerate a search space.)*
+12. Fewest coins needed to make a given amount, with unlimited coins of each value. → **Dynamic programming** *("Fewest to make an amount" with overlapping subproblems.)*
+13. Return the sum of elements between indices i and j. You will be asked ~10,000 times on the same array. → **Prefix sum** *("Range sum" asked repeatedly on an unchanging array.)*
+14. For each day's temperature, how many days until a warmer one? → **Monotonic stack** *("Days until a warmer one" = next greater element.)*
+15. Every number in an array appears twice except one. Find it, using O(1) space. → **Bit manipulation (XOR)** *("Appears twice except one" + O(1) space, x^x=0.)*
+16. Implement autocomplete over a fixed dictionary of words. → **Trie** *("Autocomplete" over a fixed dictionary = prefix queries.)*
+17. Reverse a singly linked list in place. → **In-place linked list reversal** *(Save next, reverse, advance.)*
+18. Rotate an n×n matrix 90° clockwise, in place. → **Matrix traversal** *(Transpose, then reverse each row.)*
+19. Given meeting time intervals, how many rooms are needed at the busiest moment? → **Line sweep** *("How many at the busiest moment" = max concurrency.)*
+20. Two user accounts are the same person if they share any email. How many distinct people? → **Union-Find** *("Connected through shared X" with merging.)*
 
 ---
 
 ## Round 2 — the pattern is disguised (20)
 
-21. A robot at the top-left of an m×n grid can move only right or down. How many distinct paths to the bottom-right?
-22. Find the contiguous subarray with the largest sum.
-23. You eat bananas at k per hour. Find the smallest integer k that clears all piles within h hours.
-24. Find the shortest substring of S containing every character of T.
-25. Numbers arrive one at a time. After each, report the median so far.
-26. An array of n+1 integers, each between 1 and n. Find any duplicate without modifying the array, in O(1) space.
-27. Given a list of airline tickets, reconstruct the full itinerary in order.
-28. Find the length of the longest strictly increasing subsequence.
-29. A row of houses each containing money. You cannot take from two adjacent houses. Maximise the total.
-30. Return an array where each element is the product of every other element. Division is not allowed.
-31. Return the values of a binary tree grouped by depth.
-32. Determine whether a string of brackets is correctly balanced and nested.
-33. Given intervals, find the minimum number to remove so that none overlap.
-34. Find the index of the first character in a string that appears exactly once.
-35. A grid with obstacles. Find the shortest route from the top-left to the bottom-right.
-36. Generate all valid arrangements of n pairs of parentheses.
-37. Find the kth smallest element in a matrix whose rows and columns are both sorted.
-38. Group a list of words so that anagrams are together.
-39. An array of positive integers. Find the shortest contiguous subarray summing to at least a target.
-40. Repeatedly replace a number with the sum of the squares of its digits. Does it reach 1?
+21. A robot at the top-left of an m×n grid can move only right or down. How many distinct paths to the bottom-right? → **Dynamic programming** *(Counting paths, not finding one; dp[r][c] = dp[r-1][c] + dp[r][c-1].)*
+22. Find the contiguous subarray with the largest sum. → **Greedy (Kadane's)** *("Contiguous subarray" + "largest sum"; drop running prefix when negative.)*
+23. You eat bananas at k per hour. Find the smallest integer k that clears all piles within h hours. → **Binary search on the answer** *("Smallest k such that..." — feasibility is monotonic in k.)*
+24. Find the shortest substring of S containing every character of T. → **Sliding window (variable)** *("Shortest substring containing all of...".)*
+25. Numbers arrive one at a time. After each, report the median so far. → **Two heaps** *("Median of a stream" is the canonical two-heaps problem.)*
+26. An array of n+1 integers, each between 1 and n. Find any duplicate without modifying the array, in O(1) space. → **Fast & slow pointers** *(Treat i → nums[i] as a linked list; duplicate value = cycle.)*
+27. Given a list of airline tickets, reconstruct the full itinerary in order. → **DFS (Hierholzer's)** *(Tickets are edges; each must be used exactly once.)*
+28. Find the length of the longest strictly increasing subsequence. → **DP / binary search (patience sorting)** *("Subsequence", not substring, so not a sliding window.)*
+29. A row of houses each containing money. You cannot take from two adjacent houses. Maximise the total. → **Dynamic programming** *("Cannot take two adjacent" → dp[i] = max(dp[i-1], dp[i-2] + v).)*
+30. Return an array where each element is the product of every other element. Division is not allowed. → **Prefix/suffix products** *(Same identity as prefix sum, with multiplication.)*
+31. Return the values of a binary tree grouped by depth. → **BFS** *("Grouped by depth" = level order.)*
+32. Determine whether a string of brackets is correctly balanced and nested. → **Stack** *(Nesting means last-opened-first-closed.)*
+33. Given intervals, find the minimum number to remove so that none overlap. → **Sort by end + greedy** *(Sort by end leaves the most room — the exchange argument.)*
+34. Find the index of the first character in a string that appears exactly once. → **Hash map (two passes)** *(Count, then scan for the first count of 1.)*
+35. A grid with obstacles. Find the shortest route from the top-left to the bottom-right. → **BFS** *("Shortest route" with unweighted moves.)*
+36. Generate all valid arrangements of n pairs of parentheses. → **Backtracking** *(Generate-all, pruning on the invariant.)*
+37. Find the kth smallest element in a matrix whose rows and columns are both sorted. → **Heap / binary search on value range** *(Rows/cols sorted, but matrix isn't globally sorted.)*
+38. Group a list of words so that anagrams are together. → **Hash map with canonical key** *(Sorted letters or a 26-slot count vector as key.)*
+39. An array of positive integers. Find the shortest contiguous subarray summing to at least a target. → **Sliding window** *("Sum ≥ target"; positive integers makes shrinking safe.)*
+40. Repeatedly replace a number with the sum of the squares of its digits. Does it reach 1? → **Fast & slow pointers** *(Digit-square sequence either reaches 1 or cycles.)*
 
 ---
 
 ## Round 3 — traps and stacked patterns (20)
 
-41. Count the subarrays that sum to exactly K. The array may contain negative numbers.
-42. Longest substring containing at most two distinct characters.
-43. Return the maximum of every contiguous window of size k.
-44. Given a board of letters and a dictionary, find every dictionary word present on the board.
-45. A sorted array was rotated at an unknown pivot. Find a target in O(log n).
-46. Numbers arrive in a stream. After each, report the kth largest seen so far.
-47. Edges are added to a graph one at a time. After each, report the number of connected components.
-48. Determine whether a linked list is a palindrome, using O(1) extra space.
-49. Merge k sorted linked lists into one sorted list.
-50. Given an elevation map, compute how much rainwater it traps.
-51. Find the smallest positive integer missing from an unsorted array. O(n) time, O(1) space.
-52. Given each employee's working intervals, find the free time common to everyone.
-53. Count the number of inversions in an array (pairs where a larger value precedes a smaller one).
-54. Find the longest palindromic substring of a string.
-55. Serialise a binary tree to a string and reconstruct it exactly.
-56. Given task dependencies, output an order in which all tasks can be completed.
-57. Given daily stock prices, find the maximum profit from a single buy and a single later sell.
-58. Move all zeroes in an array to the end, in place, preserving the order of the rest.
-59. An array holds 1..n with exactly one number duplicated and one missing. Find both.
-60. Design a structure supporting insert, delete, and getRandom, all in O(1) average.
+41. Count the subarrays that sum to exactly K. The array may contain negative numbers. → **Prefix sum + hash map** *(Negatives break the window; prefix sum + map of seen prefixes.)*
+42. Longest substring containing at most two distinct characters. → **Sliding window + hash map** *("At most K distinct" = variable window, map.size = distinct count.)*
+43. Return the maximum of every contiguous window of size k. → **Sliding window + monotonic deque** *(Need window max; deque of indices in decreasing value order gives O(1)/step.)*
+44. Given a board of letters and a dictionary, find every dictionary word present on the board. → **Trie + DFS backtracking** *(Trie prunes the board search once path stops being a prefix.)*
+45. A sorted array was rotated at an unknown pivot. Find a target in O(log n). → **Binary search (modified)** *(One half is always properly sorted; test which.)*
+46. Numbers arrive in a stream. After each, report the kth largest seen so far. → **Heap (min-heap size k)** *(Min-heap of size k; root is the kth largest.)*
+47. Edges are added to a graph one at a time. After each, report the number of connected components. → **Union-Find** *(Edges arrive over time, must answer after each addition.)*
+48. Determine whether a linked list is a palindrome, using O(1) extra space. → **Fast & slow + in-place reversal** *(Find middle with fast/slow, reverse second half, compare.)*
+49. Merge k sorted linked lists into one sorted list. → **Heap (k-way merge)** *(Push head of each list, pop smallest, push its successor.)*
+50. Given an elevation map, compute how much rainwater it traps. → **Two pointers / monotonic stack** *(Shorter side's max bounds the water at each step.)*
+51. Find the smallest positive integer missing from an unsorted array. O(n) time, O(1) space. → **Cyclic sort** *(Skip values outside 1..n; first index where nums[i] != i+1.)*
+52. Given each employee's working intervals, find the free time common to everyone. → **Line sweep** *(Free time = where concurrency count is zero.)*
+53. Count the number of inversions in an array (pairs where a larger value precedes a smaller one). → **Divide and conquer (merge sort)** *(Every take from the right half inverts with remaining left.)*
+54. Find the longest palindromic substring of a string. → **Expand around centre / DP** *(Validity isn't monotonic as window grows, so can't shrink.)*
+55. Serialise a binary tree to a string and reconstruct it exactly. → **DFS preorder** *(Null markers make reconstruction unambiguous.)*
+56. Given task dependencies, output an order in which all tasks can be completed. → **Topological sort** *(Same as #10 but return the order, not a boolean.)*
+57. Given daily stock prices, find the maximum profit from a single buy and a single later sell. → **Greedy single pass** *(Track min price so far and best profit so far.)*
+58. Move all zeroes in an array to the end, in place, preserving the order of the rest. → **Two pointers (compaction)** *(Write pointer trails read pointer.)*
+59. An array holds 1..n with exactly one number duplicated and one missing. Find both. → **Cyclic sort** *(Placing everything reveals both duplicate and missing at once.)*
+60. Design a structure supporting insert, delete, and getRandom, all in O(1) average. → **Hash map + array** *(Array = O(1) access, map = O(1) index lookup, swap-with-last for deletion.)*
 
 ---
 ---

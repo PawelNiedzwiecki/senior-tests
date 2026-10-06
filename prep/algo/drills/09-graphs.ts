@@ -44,6 +44,7 @@
  *    ['1','0','0'],
  *    ['0','0','1']]   → 2
  *
+ *
  * TARGET: O(rows × cols) time and space.
  * HINT: scan every cell. On unvisited land, that is a new island — flood fill
  *       it entirely so you never count it again, then keep scanning.
@@ -52,8 +53,48 @@
  *       but non-destructive. Both are correct — state which you chose and why.
  *       (These tests require the input NOT to be mutated.)
  */
-export function numIslands(_grid: string[][]): number {
-  throw new Error('Not implemented');
+const DIRECTIONS: Array<[number, number]> = [
+	[-1, 0],
+	[1, 0],
+	[0, -1],
+	[0, 1],
+];
+
+export function numIslands(grid: string[][]): number {
+	const rows = grid.length;
+	const cols = grid[0]?.length ?? 0;
+	if (rows === 0 || cols === 0) return 0;
+
+	const visited = Array.from({ length: rows }, () => new Array<boolean>(cols).fill(false));
+	let islands = 0;
+
+	for (let r = 0; r < rows; r += 1) {
+		for (let c = 0; c < cols; c += 1) {
+			if (grid[r]![c] !== "1" || visited[r]![c]) continue;
+
+			islands += 1;
+
+			const stack: Array<[number, number]> = [[r, c]];
+			visited[r]![c] = true;
+
+			while (stack.length > 0) {
+				const [row, col] = stack.pop()!;
+
+				for (const [dr, dc] of DIRECTIONS) {
+					const nr = row + dr;
+					const nc = col + dc;
+
+					if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) continue;
+					if (visited[nr]![nc] || grid[nr]![nc] !== "1") continue;
+
+					visited[nr]![nc] = true;
+					stack.push([nr, nc]);
+				}
+			}
+		}
+	}
+
+	return islands;
 }
 
 /**
@@ -75,8 +116,11 @@ export function numIslands(_grid: string[][]): number {
  *     IN-PROGRESS node means a back edge, so a cycle. A two-state visited set
  *     is NOT enough — that is the classic bug here.
  */
-export function canFinish(_numCourses: number, _prerequisites: Array<[number, number]>): boolean {
-  throw new Error('Not implemented');
+export function canFinish(
+	_numCourses: number,
+	_prerequisites: Array<[number, number]>,
+): boolean {
+	throw new Error("Not implemented");
 }
 
 /**
@@ -96,5 +140,5 @@ export function canFinish(_numCourses: number, _prerequisites: Array<[number, nu
  * WATCH: the start cell may itself be blocked. Check before you begin.
  */
 export function shortestPath(_grid: number[][]): number {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }

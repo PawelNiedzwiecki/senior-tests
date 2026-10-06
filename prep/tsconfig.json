@@ -21,7 +21,6 @@
 
     "baseUrl": ".",
     "paths": {
-      "@impl/*": ["./drills/*"],
       "@algo/*": ["./algo/drills/*"],
       "@patterns/*": ["./patterns/drills/*"],
       "@leetcode/*": ["./leetcode/drills/*"],

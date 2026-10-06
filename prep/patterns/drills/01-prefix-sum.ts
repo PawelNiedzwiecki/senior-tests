@@ -17,6 +17,8 @@
  * That distinction is the most valuable thing in this module.
  */
 
+import { threeSum } from "../../leetcode/drills/02-two-pointers";
+
 /**
  * PROBLEM 1 — Range sum, queried many times
  * Build a structure that answers sum(i..j) INCLUSIVE in O(1).
@@ -31,11 +33,23 @@
  *       removes the "what if i is 0" special case from the query.
  */
 export interface RangeSum {
-  query(i: number, j: number): number;
+	query(i: number, j: number): number;
 }
 
-export function createRangeSum(_nums: number[]): RangeSum {
-  throw new Error('Not implemented');
+export function createRangeSum(nums: number[]): RangeSum {
+	const prefix = [0]; // [0, 1, 3, 6, 10]
+
+	for (let i = 0; i < nums.length; i++) {
+		prefix.push(prefix[prefix.length - 1] + nums[i]);
+	}
+
+	return {
+		query: (i: number, j: number) => {
+			if (!nums.length) return 0;
+
+			return prefix[j + 1] - prefix[i];
+		},
+	};
 }
 
 /**
@@ -55,9 +69,7 @@ export function createRangeSum(_nums: number[]): RangeSum {
  *       miss every subarray that starts at index 0. That is the bug in this
  *       problem, and the test for it is explicit below.
  */
-export function subarraySum(_nums: number[], _k: number): number {
-  throw new Error('Not implemented');
-}
+export function subarraySum(nums: number[], k: number): number {}
 
 /**
  * PROBLEM 3 — Product of array except self
@@ -78,5 +90,45 @@ export function subarraySum(_nums: number[], _k: number): number {
  *       rather than just obeying it.
  */
 export function productExceptSelf(_nums: number[]): number[] {
-  throw new Error('Not implemented');
+	throw new Error("Not implemented");
 }
+
+// Input: [1, 2, 3, 1]
+// Output: true
+
+// Input: [1, 2, 3, 4]
+// Output: false
+
+// Contains Duplicate II: Given an integer array nums and an integer k, return
+// true if there are two distinct indices i and j in the array such that nums[i]
+// == nums[j] and abs(i - j) <= k.
+
+function containsDuplicate(nums: number[], k: number): boolean {
+	const duplicates = new Set<number>();
+
+	for (let i = 0; i < nums.length; i++) {
+		if (duplicates.has(nums[i])) {
+			return true;
+		} else {
+			duplicates.add(nums[i]);
+		}
+	}
+
+	return false;
+}
+
+function containsDuplicateII(nums: number[], k: number): boolean {
+	const duplicates = new Map<number, number>();
+
+	for (let i = 0; i < nums.length; i++) {
+		if (duplicates.has(nums[i]!) && i - duplicates.get(nums[i]!)! <= k) {
+			return true;
+		} else {
+			duplicates.set(nums[i]!, i);
+		}
+	}
+
+	return false;
+}
+
+
