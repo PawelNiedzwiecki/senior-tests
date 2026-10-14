@@ -17,6 +17,7 @@ export default defineConfig({
       '@patterns': path.resolve(import.meta.dirname, 'prep/patterns', target),
       '@leetcode': path.resolve(import.meta.dirname, 'prep/leetcode', target),
       '@tier1': path.resolve(import.meta.dirname, 'prep/tier-1', useSolutions ? 'solutions' : 'exams'),
+      '@tskata': path.resolve(import.meta.dirname, 'prep/typescript-katas', useSolutions ? 'solutions' : 'exercises'),
     },
   },
   test: {

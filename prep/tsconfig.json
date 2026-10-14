@@ -24,7 +24,8 @@
       "@algo/*": ["./algo/drills/*"],
       "@patterns/*": ["./patterns/drills/*"],
       "@leetcode/*": ["./leetcode/drills/*"],
-      "@tier1/*": ["./tier-1/exams/*"]
+      "@tier1/*": ["./tier-1/exams/*"],
+      "@tskata/*": ["./typescript-katas/exercises/*"]
     }
   },
   "include": ["."]

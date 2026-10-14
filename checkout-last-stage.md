@@ -1,7 +1,4 @@
-1h
-45m
-
-real time msg app
+system design real time msg app
 1-1 messsaing
 sending recieving syn anbd dlivery state
 retrieving retrying

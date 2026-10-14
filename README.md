@@ -8,6 +8,7 @@ Two things live in this repository:
 | **[`prep/patterns/`](./prep/patterns/README.md)** | **Pattern recognition.** A catalogue of the 22 recurring interview patterns with the tells that identify each, a 60-problem "name the pattern" quiz with answer key, and runnable drills for the 8 patterns `algo/` doesn't cover. |
 | **[`prep/tier-1/`](./prep/tier-1/README.md)** | **The seven Tier 1 patterns, in depth.** Five exams for each of the patterns that turn up in nearly every interview — hash map, two pointers, sliding window, prefix sum, binary search, intervals, BFS/DFS. Each module explains the pattern first, and every exam carries a hint. 35 problems. |
 | **[`prep/leetcode/`](./prep/leetcode/README.md)** | **Pattern practice.** Two LeetCode problems for each of the 22 patterns (44 in total). Every module explains the pattern first — tell, template, cost — then the two problems, each with its own explanation and hints. |
+| **[`prep/typescript-katas/`](./prep/typescript-katas/README.md)** | **Domain katas (bowling-style).** 10 timed TypeScript exercises — bowling, string calculator, Roman numerals, tennis, checkout, Yatzy, Mars rover, Game of Life, word wrap, poker hands — each with rules, clarifying questions, a hint, tests and an annotated solution, plus a guide to approaching them like a senior. |
 | **[`prep/ONE-DAY.md`](./prep/ONE-DAY.md)** | **All 22 patterns in one day.** A recognition-first schedule that compresses the 22 patterns into 6 families, with a cold diagnostic, blank-page template drills and spaced retrievals. Use it when the interview is tomorrow. |
 | **[`prep/`](./prep/README.md)** | **Frontend TypeScript round** (likely Live Coding 2): 24 test-driven drills on the type system, React hooks, DOM and a11y, plus 4 mocks and 5 cheat sheets. |
 | `src/` | The original React exercise app (below), unchanged. |
@@ -18,6 +19,7 @@ npm run drills:watch                # all drills, re-running on save
 npm run drills -- 01-hash-maps      # one module
 npm run drills -- leetcode          # the 44-problem pattern set
 npm run drills -- tier-1            # the 35-exam Tier 1 set
+yarn drills typescript-katas                    # the 10 bowling-style domain katas
 npm run drills:solutions            # the same tests against the solutions
 npm run dev                         # the React exercise app
 ```

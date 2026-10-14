@@ -5,7 +5,8 @@
       "@algo/*": ["./algo/solutions/*"],
       "@patterns/*": ["./patterns/solutions/*"],
       "@leetcode/*": ["./leetcode/solutions/*"],
-      "@tier1/*": ["./tier-1/solutions/*"]
+      "@tier1/*": ["./tier-1/solutions/*"],
+      "@tskata/*": ["./typescript-katas/solutions/*"]
     }
   }
 }
